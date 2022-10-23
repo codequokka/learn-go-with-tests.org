@@ -3,15 +3,22 @@ package main
 import "testing"
 
 func TestHello(t *testing.T) {
-	t.Run("say hello to person", func(t *testing.T) {
-		got := Hello("Chris")
+	t.Run("say hello to person in English", func(t *testing.T) {
+		got := Hello("Chris", "")
 		want := "Hello, Chris"
 
 		assertCorrectMessage(t, got, want)
 	})
 
-	t.Run("say hello to world when an empty string is supplied", func(t *testing.T) {
-		got := Hello("")
+	t.Run("say hello to person in Spanish", func(t *testing.T) {
+		got := Hello("Elodie", "Spanish")
+		want := "Hola, Elodie"
+
+		assertCorrectMessage(t, got, want)
+	})
+
+	t.Run("say hello to world in English when an empty string is supplied", func(t *testing.T) {
+		got := Hello("", "")
 		want := "Hello, world"
 
 		assertCorrectMessage(t, got, want)
