@@ -14,3 +14,8 @@ $ go install github.com/rakyll/gotest@latest
 $ gotest ./...
 $ go test ./...
 ```
+
+- Enable git hooks scripts.
+```
+$ git config --local core.hooksPath .githooks
+```
