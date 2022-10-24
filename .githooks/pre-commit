@@ -3,7 +3,7 @@
 # Check golang files are staged.
 staged_golang_files=$(git diff --cached --name-only | grep '.go$')
 
-if [ -z $staged_golang_files ];then
+if [ -z "$staged_golang_files" ];then
   exit 0
 fi
 
