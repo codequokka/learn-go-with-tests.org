@@ -19,3 +19,9 @@ $ go test ./...
 ```
 $ git config --local core.hooksPath .githooks
 ```
+
+- Check workflows status
+```
+$ gh workflow view Lint
+$ gh workflow view Test
+```
