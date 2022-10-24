@@ -3,8 +3,8 @@ package iteration
 import "testing"
 
 func TestRepeat(t *testing.T) {
-	got := Repeat("a")
-	want := "aaaaa"
+	got := Repeat("a", 2)
+	want := "aa"
 
 	if got != want {
 		t.Errorf("got: %q want: %q", got, want)
@@ -13,7 +13,7 @@ func TestRepeat(t *testing.T) {
 
 func BenchmarkRepeat(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		Repeat("b")
+		Repeat("b", 3)
 	}
 
 }
